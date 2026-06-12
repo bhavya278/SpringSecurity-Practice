@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SchoolRepo extends JpaRepository<SchoolEntity,Long>{
-    StudentEntity findByAadharNumber(String aadharNumber);
 
 
 }

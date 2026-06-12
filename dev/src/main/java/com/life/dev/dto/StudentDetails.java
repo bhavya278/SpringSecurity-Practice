@@ -1,10 +1,5 @@
 package com.life.dev.dto;
 
-//import lombok.AllArgsConstructor;
-//import lombok.Getter;
-//import lombok.NoArgsConstructor;
-//import lombok.Setter;
-
 import java.util.Objects;
 
 
@@ -33,6 +28,5 @@ public class StudentDetails {
     public String getAadharNumber() {
         return aadharNumber;
     }
-
 
 }

@@ -1,7 +1,6 @@
 package com.life.dev.entity;
 
 import jakarta.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "schools")
@@ -13,16 +12,13 @@ public class SchoolEntity {
 
     private String schoolName;
 
-    private String board;
+    private String yearDuration;
 
-    private String passingYear;
+    private String board;
 
     @ManyToOne
     @JoinColumn(name = "student_aadhar")
     private StudentEntity student;
-
-    @OneToMany(mappedBy = "school", cascade = CascadeType.ALL)
-    private List<MarksEntity> marks;
 
     public Long getSchoolId() {
         return schoolId;
@@ -32,12 +28,12 @@ public class SchoolEntity {
         this.schoolId = schoolId;
     }
 
-    public String getSchoolName() {
-        return schoolName;
+    public String getYearDuration() {
+        return yearDuration;
     }
 
-    public void setSchoolName(String schoolName) {
-        this.schoolName = schoolName;
+    public void setYearDuration(String yearDuration) {
+        this.yearDuration = yearDuration;
     }
 
     public String getBoard() {
@@ -48,12 +44,12 @@ public class SchoolEntity {
         this.board = board;
     }
 
-    public String getPassingYear() {
-        return passingYear;
+    public String getSchoolName() {
+        return schoolName;
     }
 
-    public void setPassingYear(String passingYear) {
-        this.passingYear = passingYear;
+    public void setSchoolName(String schoolName) {
+        this.schoolName = schoolName;
     }
 
     public StudentEntity getStudent() {
@@ -64,11 +60,4 @@ public class SchoolEntity {
         this.student = student;
     }
 
-    public List<MarksEntity> getMarks() {
-        return marks;
-    }
-
-    public void setMarks(List<MarksEntity> marks) {
-        this.marks = marks;
-    }
 }
